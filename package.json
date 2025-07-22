@@ -4,9 +4,9 @@
   "main": "dist/server.js",
   "scripts": {
     "dev": "nodemon server.ts",
-    "start": "if [ ! -d dist ]; then npm run build; fi && node dist/server.js",
+    "start": "node dist/server.js",
     "build": "tsc",
-    "vercel-build": "rm -rf dist && tsc"
+    "vercel-build": "npm run build"
   },
   "keywords": [
     "Express",

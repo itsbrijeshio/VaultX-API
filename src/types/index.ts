@@ -1,4 +1,5 @@
 import { NextFunction, Request, Response } from "express";
+import { ParamsDictionary } from "express-serve-static-core";
 
 // =============== Error Status ================
 export type ErrorStatus = "failed" | "warning" | "info" | "error";
@@ -29,7 +30,7 @@ export interface ErrorOptions {
 
 // ================ Auth Request ================
 export interface AuthRequest
-  extends Request<any, any, any, any, Record<string, any>> {
+  extends Request<ParamsDictionary, any, any, any, Record<string, any>> {
   auth: {
     _id: string;
     role?: string;

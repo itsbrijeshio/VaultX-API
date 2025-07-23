@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "nodemon ./server.ts",
     "start": "node dist/server.js",
-    "build": "tsc"
+    "build": "tsc && npm run copy:yaml",
+    "copy:yaml": "cp src/docs/swagger.yaml dist/src/docs/swagger.yaml"
   },
   "keywords": [
     "Express",
